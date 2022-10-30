@@ -20,8 +20,9 @@ print(get_count_char(main_str))
 x = get_count_char(main_str).copy()
 
 def new_dict_(dict_char):
+    sum_value = sum(dict_char.values())    
     for key, value in dict_char.items():
-        dict_char[key] = round(value / sum(dict_char.values()) * 100, 1)
+        dict_char[key] = round(value / sum_value * 100, 1)
     return dict_char
 
 print(new_dict_(x))
